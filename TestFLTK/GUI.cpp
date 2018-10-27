@@ -1,6 +1,6 @@
 #include "GUI.h"
 #include "std_lib_facilities.h"
-#include <sstream>
+//#include <sstream>
 
 using namespace Graph_lib;
 
@@ -52,12 +52,6 @@ void Out_box::attach(Graph_lib::Window& win)
 	own = &win;
 }
 
-/*
-Menu::Menu(Point xy, int w, int h, Kind kk, const string& s)
-:Widget(xy,w,h,s,0), k(kk), offset(0)
-{
-}
-*/
 
 int Menu::attach(Button& b)
 {
@@ -83,3 +77,5 @@ int Menu::attach(Button* p)
 //	owned.push_back(p);
 	return attach(*p);
 }
+
+

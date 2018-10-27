@@ -5,6 +5,7 @@ using namespace Graph_lib;
 
 // Simple_window is basic scaffolding for ultra-simple interaction with graphics
 // it provides one window with one "next" button for ultra-simple animation
+// 22 avril 2018 : j'ai fusionné le code de simple_window.cpp dans le .h pour alléger le code
 
 struct Simple_window : Window {
 	Simple_window(Point xy, int w, int h, const string& title )
@@ -22,7 +23,8 @@ struct Simple_window : Window {
 		Fl::redraw();
 	}
 
-	Button next_button;
+	Button next_button;		
+
 private:
 	bool button_pushed;
 	

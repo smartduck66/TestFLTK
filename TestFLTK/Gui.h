@@ -91,7 +91,12 @@ struct Out_box : Widget {
 
 struct Menu : Widget {
 	enum Kind { horizontal, vertical };
-	Menu(Point xy, int w, int h, Kind kk, const string& s);
+
+	Menu(Point xy, int w, int h, Kind kk, const string& s)	// Le constructeur de Menu a été remis ici (initialement dans GUI.cpp)
+		:Widget(xy, w, h, s, 0), k(kk), offset(0)
+	{
+	}
+	
 	Vector_ref<Button> selection;
 	Kind k;
 	int offset;
@@ -109,6 +114,8 @@ struct Menu : Widget {
 	}	
 
 };
+
+
 
 }
 #endif
